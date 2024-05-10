@@ -14,6 +14,30 @@ window.onload = function(){
 
     initDropdown();
 
+    //grab our button off the page
+    let theButton = document.querySelector("#theButton");
+
+    //when our button is clicked call displayFootballTeam
+    theButton.addEventListener("click", displayFootballTeam);
+
+}
+
+//this function will display the details about our football team
+function displayFootballTeam(){
+
+    //get the dropdown from the page
+    let theDropdown = document.querySelector("#footballSelect");
+    //get the dropdown from the page
+    let resultsParagraph = document.querySelector("#results");
+
+    //get the index of the selected option in the dropdown
+    let selectedIndex = theDropdown.selectedIndex;
+    //get the team out of the teams array based on the index from the dropdown
+    let selectedTeam = teams[selectedIndex];
+    //put the info about the selected team in our paragraph
+    resultsParagraph.innerHTML = `You selected the ${selectedTeam.name} (${selectedTeam.code}) who play in ${selectedTeam.plays}`
+
+
 }
 
 function initDropdown(){
