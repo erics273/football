@@ -7,16 +7,21 @@
 </head>
 <body>
 
-    <!-- added a select (dropdown list) to hold our football teams -->
-    <select id="footballSelect" name="footballSelect">
-    </select>
 
-    <!-- button to click to show the selected teams information -->
-    <button id="theButton">Select a team</button>
+    <!-- wrapping our form fields in an actual form -->
+    <form id="footballForm">
+        <!-- added a select (dropdown list) to hold our football teams -->
+        <select id="footballSelect" name="footballSelect">
+        </select>
+
+        <!-- button to click to show the selected teams information -->
+        <button>Select a team</button>
+    </form>
 
     <!-- this is a paragraph where we will display the information about the selected team -->
     <p id="results"></p>
     
+    <!-- include our JS file for this page -->
     <script src="scripts/index.js"></script>
 </body>
 </html>
